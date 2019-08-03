@@ -1,7 +1,8 @@
 import React from "react";
+import Hero from "../components/Hero";
 
 const Houses = () => {
-  return <div>Hello form Houses Page</div>;
+  return <Hero hero="housesHero" />;
 };
 
 export default Houses;
