@@ -32,9 +32,15 @@ class HouseProvider extends Component {
     return tempItems;
   }
 
+  getHouse = slug => {
+    let tempHouse = [...this.state.house];
+    const house = tempHouse.find(house => house.slug === slug);
+    return house;
+  };
+
   render() {
     return (
-      <HouseContext.Provider value={{ ...this.state }}>
+      <HouseContext.Provider value={{ ...this.state, getHouse: this.getHouse }}>
         {this.props.children}
       </HouseContext.Provider>
     );

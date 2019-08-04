@@ -1,19 +1,19 @@
-import room1 from "./images/details-1.jpeg";
-import room2 from "./images/details-2.jpeg";
-import room3 from "./images/details-3.jpeg";
-import room4 from "./images/details-4.jpeg";
-import img1 from "./images/room-1.jpeg";
-import img2 from "./images/room-2.jpeg";
-import img3 from "./images/room-3.jpeg";
-import img4 from "./images/room-4.jpeg";
-import img5 from "./images/room-5.jpeg";
-import img6 from "./images/room-6.jpeg";
-import img7 from "./images/room-7.jpeg";
-import img8 from "./images/room-8.jpeg";
-import img9 from "./images/room-9.jpeg";
-import img10 from "./images/room-10.jpeg";
-import img11 from "./images/room-11.jpeg";
-import img12 from "./images/room-12.jpeg";
+import house1 from "./images/details-1.jpeg";
+import house2 from "./images/details-2.jpeg";
+import house3 from "./images/details-3.jpeg";
+import house4 from "./images/details-4.jpeg";
+import img1 from "./images/house-1.jpeg";
+import img2 from "./images/house-2.jpeg";
+import img3 from "./images/house-3.jpeg";
+import img4 from "./images/house-4.jpeg";
+import img5 from "./images/house-5.jpeg";
+import img6 from "./images/house-6.jpeg";
+import img7 from "./images/house-7.jpeg";
+import img8 from "./images/house-8.jpeg";
+import img9 from "./images/house-9.jpeg";
+import img10 from "./images/house-10.jpeg";
+import img11 from "./images/house-11.jpeg";
+import img12 from "./images/house-12.jpeg";
 
 export default [
   {
@@ -26,7 +26,7 @@ export default [
       type: "family",
       price: 1000,
       size: 200,
-      rooms: 2,
+      houses: 2,
       pets: false,
       parking: false,
       featured: false,
@@ -52,21 +52,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -83,7 +83,7 @@ export default [
       type: "single",
       price: 650,
       size: 250,
-      rooms: 1,
+      houses: 1,
       pets: false,
       parking: false,
       featured: false,
@@ -109,21 +109,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -136,11 +136,11 @@ export default [
     },
     fields: {
       name: "one bedroom",
-      slug: "one-bedroom",
+      slug: "one-bedhouse",
       type: "single",
       price: 550,
       size: 300,
-      rooms: 1,
+      houses: 1,
       pets: true,
       parking: false,
       featured: false,
@@ -166,21 +166,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -197,7 +197,7 @@ export default [
       type: "family",
       price: 850,
       size: 400,
-      rooms: 2,
+      houses: 2,
       pets: true,
       parking: true,
       featured: false,
@@ -223,21 +223,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -254,7 +254,7 @@ export default [
       type: "family",
       price: 200,
       size: 300,
-      rooms: 3,
+      houses: 3,
       pets: false,
       parking: false,
       featured: false,
@@ -280,21 +280,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -311,7 +311,7 @@ export default [
       type: "single",
       price: 250,
       size: 480,
-      rooms: 1,
+      houses: 1,
       pets: false,
       parking: false,
       featured: false,
@@ -337,21 +337,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -368,7 +368,7 @@ export default [
       type: "family",
       price: 300,
       size: 620,
-      rooms: 2,
+      houses: 2,
       pets: true,
       parking: false,
       featured: false,
@@ -394,21 +394,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -421,11 +421,11 @@ export default [
     },
     fields: {
       name: "three bedrooms",
-      slug: "three- bedrooms",
+      slug: "three-bedrooms",
       type: "family",
       price: 1200,
       size: 500,
-      rooms: 3,
+      houses: 3,
       pets: true,
       parking: true,
       featured: true,
@@ -444,28 +444,28 @@ export default [
         {
           fields: {
             file: {
-              url: img8
+              url: img6
             }
           }
         },
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -482,7 +482,7 @@ export default [
       type: "family",
       price: 300,
       size: 1600,
-      rooms: 5,
+      houses: 5,
       pets: false,
       parking: false,
       featured: false,
@@ -508,21 +508,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -539,7 +539,7 @@ export default [
       type: "single",
       price: 510,
       size: 550,
-      rooms: 1,
+      houses: 1,
       pets: false,
       parking: false,
       featured: false,
@@ -565,21 +565,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -596,7 +596,7 @@ export default [
       type: "single",
       price: 400,
       size: 200,
-      rooms: 1,
+      houses: 1,
       pets: true,
       parking: false,
       featured: false,
@@ -622,21 +622,21 @@ export default [
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -649,11 +649,11 @@ export default [
     },
     fields: {
       name: "one bedroom",
-      slug: "one- bedroom",
+      slug: "one-bedroom",
       type: "single",
       price: 680,
       size: 200,
-      rooms: 1,
+      houses: 1,
       pets: true,
       parking: true,
       featured: true,
@@ -672,28 +672,28 @@ export default [
         {
           fields: {
             file: {
-              url: img12
+              url: img1
             }
           }
         },
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
@@ -710,7 +710,7 @@ export default [
       type: "family",
       price: 740,
       size: 100,
-      rooms: 2,
+      houses: 2,
       pets: true,
       parking: true,
       featured: true,
@@ -729,28 +729,28 @@ export default [
         {
           fields: {
             file: {
-              url: room1
+              url: house4
             }
           }
         },
         {
           fields: {
             file: {
-              url: room2
+              url: house2
             }
           }
         },
         {
           fields: {
             file: {
-              url: room3
+              url: house3
             }
           }
         },
         {
           fields: {
             file: {
-              url: room4
+              url: house4
             }
           }
         }
