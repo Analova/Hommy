@@ -16,7 +16,6 @@ export default class SingleHouse extends Component {
     };
   }
   static contextType = HouseContext;
-  componentDidMount() {}
 
   render() {
     const { getHouse } = this.context;
@@ -38,21 +37,54 @@ export default class SingleHouse extends Component {
       description,
       rooms,
       price,
+      size,
       extras,
       pets,
-      parking,
+      elevator,
       images
     } = house;
+    const [mainImg, ...defaultImg] = images;
     return (
-      <div>
-        <StyledHero img={images[0] || this.state.defaultBcg}>
+      <>
+        <StyledHero img={mainImg || this.state.defaultBcg}>
           <Banner title={`${name}`}>
             <Link to="/houses" className="btn-primary">
               go back
             </Link>
           </Banner>
         </StyledHero>
-      </div>
+        <section className="single-house">
+          <div className="single-house-images">
+            {defaultImg.map((item, index) => {
+              return <img key={item} src={item} alt="images of the house" />;
+            })}
+          </div>
+          <div className="single-house-info">
+            <article className="desc">
+              <h3>Details</h3>
+              <p>{description}</p>
+            </article>
+            <article className="info">
+              <h3>info</h3>
+              <h6>price: ${price}</h6>
+              <h6>size: {size} SQ </h6>
+              <h6>rooms: {rooms} </h6>
+              <h6>{pets ? "pets allowed" : "no pets allowed"}</h6>
+              <h6>
+                {elevator ? "elevator available" : "no elevator abailable"}
+              </h6>
+            </article>
+          </div>
+        </section>
+        <section className="house-extras">
+          <h6>extras</h6>
+          <ul className="extras">
+            {extras.map((item, i) => {
+              return <li key={i}>-{item}</li>;
+            })}
+          </ul>
+        </section>
+      </>
     );
   }
 }
