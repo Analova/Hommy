@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import defaultImg from "../images/house-1.jpeg";
 
 export default function Houses({ house }) {
-  console.log(house);
+  //console.log(house);
   const { name, slug, images, price } = house;
   return (
     <article className="house">

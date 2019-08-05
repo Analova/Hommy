@@ -33,7 +33,7 @@ class HouseProvider extends Component {
   }
 
   getHouse = slug => {
-    let tempHouse = [...this.state.house];
+    let tempHouse = [...this.state.houses];
     const house = tempHouse.find(house => house.slug === slug);
     return house;
   };

@@ -19,3 +19,4 @@ export default class FeaturedHouses extends Component {
     );
   }
 }
+
