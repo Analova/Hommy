@@ -48,4 +48,14 @@ class HouseProvider extends Component {
 }
 const HouseConsumer = HouseContext.Consumer;
 
+export function withHouseConsumer(Component) {
+  return function ConsumerWrapper(props) {
+    return (
+      <HouseConsumer>
+        {value => <Component {...props} context={value} />}
+      </HouseConsumer>
+    );
+  };
+}
+
 export { HouseProvider, HouseConsumer, HouseContext };
