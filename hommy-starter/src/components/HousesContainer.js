@@ -10,11 +10,10 @@ function HousesContainer({ context }) {
     return <Loading />;
   }
   return (
-    <div>
-      Hello for HousesContainer
+    <>
       <HousesFilter houses={houses} />
       <HousesList houses={sortedHouses} />
-    </div>
+    </>
   );
 }
 

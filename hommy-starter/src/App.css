@@ -554,3 +554,31 @@ a {
 }
 
 /* end of single house*/
+/* roomlist */
+.houseslist {
+  padding: 5rem 0;
+}
+
+.houseslist-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
+}
+
+@media screen and (min-width: 776px) {
+  .houseslist-center {
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .houseslist-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+/* end of roomlist */
