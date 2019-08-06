@@ -73,6 +73,21 @@ export default function HousesFilter({ houses }) {
           </select>
         </div>
         {/* end of select rooms */}
+        {/* price */}
+        <div className="form-group">
+          <label htmlFor="price">Price:{price}</label>
+          <input
+            type="range"
+            name="price"
+            min={minPrice}
+            max={maxPrice}
+            id="price"
+            value={price}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+        {/* end of price */}
       </form>
     </section>
   );

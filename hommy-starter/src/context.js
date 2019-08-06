@@ -86,6 +86,7 @@ class HouseProvider extends Component {
     let tempHouses = [...houses];
     // transform to a numver
     rooms = parseInt(rooms);
+    price = parseInt(price);
     // filter by type
     if (type !== "all") {
       tempHouses = tempHouses.filter(house => house.type === type);
@@ -94,6 +95,11 @@ class HouseProvider extends Component {
     if (rooms !== 1) {
       tempHouses = tempHouses.filter(houses => houses.rooms === rooms);
     }
+    // filter by price
+
+    tempHouses = tempHouses.filter(houses => houses.price <= price);
+
+    // change State
     this.setState({
       sortedHouses: tempHouses
     });
