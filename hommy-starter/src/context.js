@@ -74,7 +74,7 @@ class HouseProvider extends Component {
     let {
       houses,
       type,
-      capacity,
+      rooms,
       price,
       minSize,
       maxSize,
@@ -82,9 +82,17 @@ class HouseProvider extends Component {
       pets
     } = this.state;
 
+    // all the houses
     let tempHouses = [...houses];
+    // transform to a numver
+    rooms = parseInt(rooms);
+    // filter by type
     if (type !== "all") {
       tempHouses = tempHouses.filter(house => house.type === type);
+    }
+    //filter by rooms
+    if (rooms !== 1) {
+      tempHouses = tempHouses.filter(houses => houses.rooms === rooms);
     }
     this.setState({
       sortedHouses: tempHouses

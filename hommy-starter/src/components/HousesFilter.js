@@ -12,7 +12,7 @@ export default function HousesFilter({ houses }) {
   const {
     handleChange,
     type,
-    capacity,
+    rooms,
     price,
     minPrice,
     maxPrice,
@@ -33,9 +33,18 @@ export default function HousesFilter({ houses }) {
       </option>
     );
   });
+  let capacity = getUnique(houses, "rooms");
+  capacity = capacity.map((item, index) => {
+    return (
+      <option key={index} value={item}>
+        {item}
+      </option>
+    );
+  });
+
   return (
     <section className="filter-container ">
-      <form className="form-group">
+      <form className="filter-form">
         {/* select type */}
         <div className="form-group">
           <label htmlFor="type">house type</label>
@@ -50,6 +59,20 @@ export default function HousesFilter({ houses }) {
           </select>
         </div>
         {/* end of select type */}
+        {/* select rooms */}
+        <div className="form-group">
+          <label htmlFor="rooms">Rooms</label>
+          <select
+            name="rooms"
+            id="rooms"
+            value={rooms}
+            className="form-control"
+            onChange={handleChange}
+          >
+            {capacity}
+          </select>
+        </div>
+        {/* end of select rooms */}
       </form>
     </section>
   );

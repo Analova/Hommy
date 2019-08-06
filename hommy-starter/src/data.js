@@ -26,7 +26,7 @@ export default [
       type: "family",
       price: 1000,
       size: 200,
-      rooms: 2,
+      rooms: 1,
       pets: false,
       elevator: false,
       featured: false,
