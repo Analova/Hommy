@@ -8,17 +8,31 @@ class HouseProvider extends Component {
     houses: [],
     featuredHouses: [],
     sortedHouses: [],
-    loading: true
+    loading: true,
+    type: "all",
+    rooms: 1,
+    price: 0,
+    minPrice: 0,
+    maxPrice: 0,
+    minSize: 0,
+    maxSize: 0,
+    elevator: false,
+    pets: false
   };
   // get Data
   componentDidMount() {
     let houses = this.formatData(items);
     let featuredHouses = houses.filter(house => house.featured === true);
+    let maxPrice = Math.max(...houses.map(item => item.price));
+    let maxSize = Math.max(...houses.map(item => item.size));
     this.setState({
       houses,
       featuredHouses,
       sortedHouses: houses,
-      loading: false
+      loading: false,
+      price: maxPrice,
+      maxPrice,
+      maxSize
     });
   }
 
@@ -38,9 +52,25 @@ class HouseProvider extends Component {
     return house;
   };
 
+  handleChange = event => {
+    const type = event.target.type;
+    const name = event.target.name;
+    const value = event.target.value;
+    console.log(type, name, value);
+  };
+
+  filterRooms = () => {
+    console.log("filte me");
+  };
   render() {
     return (
-      <HouseContext.Provider value={{ ...this.state, getHouse: this.getHouse }}>
+      <HouseContext.Provider
+        value={{
+          ...this.state,
+          getHouse: this.getHouse,
+          handleChange: this.handleChange
+        }}
+      >
         {this.props.children}
       </HouseContext.Provider>
     );
