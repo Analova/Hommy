@@ -80,7 +80,7 @@ export default [
     fields: {
       name: "studio",
       slug: "studio",
-      type: "single",
+      type: "new",
       price: 650,
       size: 250,
       rooms: 1,
@@ -194,7 +194,7 @@ export default [
     fields: {
       name: "two bedrooms",
       slug: "two- bedrooms",
-      type: "family",
+      type: "new",
       price: 850,
       size: 400,
       rooms: 2,
@@ -650,7 +650,7 @@ export default [
     fields: {
       name: "one bedroom",
       slug: "one-bedroom",
-      type: "single",
+      type: "old",
       price: 680,
       size: 200,
       rooms: 1,

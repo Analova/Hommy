@@ -53,14 +53,43 @@ class HouseProvider extends Component {
   };
 
   handleChange = event => {
-    const type = event.target.type;
+    const target = event.target;
+    const value = event.type === "checkbox" ? target.checked : target.value;
     const name = event.target.name;
-    const value = event.target.value;
-    console.log(type, name, value);
+    this.setState(
+      {
+        [name]: value
+      },
+      this.filterHouse
+    );
+    // const type = event.target.type;
+    // const name = event.target.name;
+    // const value = event.target.value;
+    // console.log(
+    //   `the type is ${type}, the name is ${name}, the value is ${value}`
+    // );
   };
 
-  filterRooms = () => {
-    console.log("filte me");
+  filterHouse = () => {
+    let {
+      houses,
+      type,
+      capacity,
+      price,
+      minSize,
+      maxSize,
+      elevator,
+      pets
+    } = this.state;
+
+    let tempHouses = [...houses];
+    if (type !== "all") {
+      tempHouses = tempHouses.filter(house => house.type === type);
+    }
+    this.setState({
+      sortedHouses: tempHouses
+    });
+    //console.log("filte me");
   };
   render() {
     return (
