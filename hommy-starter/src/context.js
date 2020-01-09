@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import items from "./data";
+import Client from "./Contentful";
+
+Client.getEntries({
+  content_type: "realEstate"
+}).then(response => console.log("Real Estate is here", response.items));
 
 const HouseContext = React.createContext();
 
@@ -19,21 +24,33 @@ class HouseProvider extends Component {
     elevator: false,
     pets: false
   };
+
   // get Data
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: "realEstate",
+        order: "fields.name"
+      });
+      let houses = this.formatData(response.items);
+      let featuredHouses = houses.filter(house => house.featured === true);
+      let maxPrice = Math.max(...houses.map(item => item.price));
+      let maxSize = Math.max(...houses.map(item => item.size));
+      this.setState({
+        houses,
+        featuredHouses,
+        sortedHouses: houses,
+        loading: false,
+        price: maxPrice,
+        maxPrice,
+        maxSize
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   componentDidMount() {
-    let houses = this.formatData(items);
-    let featuredHouses = houses.filter(house => house.featured === true);
-    let maxPrice = Math.max(...houses.map(item => item.price));
-    let maxSize = Math.max(...houses.map(item => item.size));
-    this.setState({
-      houses,
-      featuredHouses,
-      sortedHouses: houses,
-      loading: false,
-      price: maxPrice,
-      maxPrice,
-      maxSize
-    });
+    this.getData();
   }
 
   formatData(items) {
@@ -71,16 +88,7 @@ class HouseProvider extends Component {
   };
 
   filterHouse = () => {
-    let {
-      houses,
-      type,
-      rooms,
-      price,
-      minSize,
-      maxSize,
-      elevator,
-      pets
-    } = this.state;
+    let { houses, type, rooms, price } = this.state;
 
     // all the houses
     let tempHouses = [...houses];

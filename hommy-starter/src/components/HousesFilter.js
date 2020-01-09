@@ -9,18 +9,7 @@ const getUnique = (items, value) => {
 export default function HousesFilter({ houses }) {
   const context = useContext(HouseContext);
   //console.log(context);
-  const {
-    handleChange,
-    type,
-    rooms,
-    price,
-    minPrice,
-    maxPrice,
-    minSize,
-    maxSize,
-    elevator,
-    pets
-  } = context;
+  const { handleChange, type, rooms, price, minPrice, maxPrice } = context;
   // get unique types
   let types = getUnique(houses, "type");
   //add all
